@@ -377,7 +377,7 @@
     <div>
       <i class="fa-solid fa-shield-halved" style="font-size: 50px; margin-bottom: 15px;"></i>
       <h2>PROTECTED SCREEN</h2>
-      <p style="font-size: 12px; margin-top: 8px;">Aplikasi ini melindungi Hak Cipta dengan bertujuan untuk mempermudah Inspeksi. Mohon untuk tidak Screenshot & Rekam Layar.</p>
+      <p style="font-size: 12px; margin-top: 8px;">This App is protected by Copyright to ensure safety. Please Do Not Screenshot or Screen Record.</p>
     </div>
   </div>
 
@@ -400,8 +400,8 @@
         <div class="master-info">
           <i class="fa-solid fa-file-image"></i>
           <div class="master-text">
-            <span id="master-status-title">Upload Foto Set Barbie</span>
-            <span id="master-status-desc">Klik untuk upload set Barbie lengkap</span>
+            <span id="master-status-title">Upload Barbie Set Image</span>
+            <span id="master-status-desc">Click to upload a Complete Barbie Set</span>
           </div>
         </div>
         <i class="fa-solid fa-chevron-right" style="color: var(--barbie-pink); font-size: 12px;"></i>
@@ -415,7 +415,7 @@
           <div class="corner-reticle bottom-left"></div>
           <div class="corner-reticle bottom-right"></div>
 
-          <div class="auto-badge">AUTO</div>
+          <div class="auto-badge">LIVE SCAN</div>
 
           <video id="webcam-feed" autoplay playsinline style="display:none;"></video>
           <canvas id="canvas-output" style="display:none;"></canvas>
@@ -430,7 +430,7 @@
       <div id="scan-result"></div>
 
       <button class="scan-btn" onclick="triggerScan()">
-        <i class="fa-solid fa-camera"></i> SCAN PACKAGING
+        <i class="fa-solid fa-camera"></i> SCAN PACKAGING NOW
       </button>
 
       <div class="footer-instructions">
@@ -438,11 +438,9 @@
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
         </div>
         <div class="instruction-text">Position packaging in frame</div>
-        <div class="sub-instruction">Tap Scan Packaging</div>
+        <div class="instruction-text">Tap Scan Packaging</div>
       </div>
 
     </div>
@@ -466,7 +464,7 @@
         document.getElementById('placeholder-box').style.display = 'none';
         videoStream = stream;
       } catch (err) {
-        console.warn("Kamera tidak dapat diakses:", err);
+        console.warn("Camera cannot be accessed:", err);
       }
     }
 
@@ -474,7 +472,7 @@
       const file = event.target.files[0];
       if (file) {
         masterFile = file;
-        document.getElementById('master-status-title').innerText = "Foto Master Terpasang ✓";
+        document.getElementById('master-status-title').innerText = "Barbie Set Uploaded ✓";
         document.getElementById('master-status-desc').innerText = file.name.substring(0, 20) + "...";
         document.querySelector('.master-upload-section').style.borderColor = "#2e7d32";
         document.querySelector('.master-upload-section').style.background = "#e8f5e9";
@@ -485,7 +483,7 @@
       const resultBox = document.getElementById('scan-result');
       
       if (!masterFile) {
-        alert("Silakan upload 'Foto Master Acuan' terlebih dahulu!");
+        alert("Please upload an Image of the Barbie Set before Scanning.");
         return;
       }
 
@@ -524,7 +522,7 @@
             resultBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> SET COMPLETE (MATCH: ${data.score || '100'}%)`;
           } else {
             resultBox.className = "result-ng";
-            resultBox.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> MISSING ITEM DETECTED (${data.message || 'NG'})`;
+            resultBox.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> SET INCOMPLETE (${data.message || 'NG'})`;
           }
         } catch (err) {
           // Fallback UI simulasi jika server backend belum merespons
@@ -535,7 +533,7 @@
               resultBox.innerHTML = '<i class="fa-solid fa-circle-check"></i> SET COMPLETE (ALL ITEMS PRESENT)';
             } else {
               resultBox.className = "result-ng";
-              resultBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> MISSING ITEM DETECTED (NG)';
+              resultBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> SET INCOMPLETE (CHECK AGAIN)';
             }
           }, 800);
         }
