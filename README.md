@@ -28,7 +28,7 @@
 
 | 📱 Live Scanner Interface | 🔒 Anti-Screenshot Defense | 📷 Hardware & Microcontroller Setup |
 | :---: | :---: | :---: |
-| <img width="585" height="1266" alt="Image" src="https://github.com/user-attachments/assets/ba047895-2723-45fb-8e3f-91802e2d75b9" /> | <img width="585" height="1266" alt="Image" src="https://github.com/user-attachments/assets/4fbab3d1-f4a0-47d6-bf51-ee180db56c02" /> | <img width="1169" height="1418" alt="Image" src="https://github.com/user-attachments/assets/62dbee10-af60-4b21-b50e-48c6d8a0a900" |
+| <img width="585" height="1266" alt="Image" src="https://github.com/user-attachments/assets/ba047895-2723-45fb-8e3f-91802e2d75b9" /> | <img width="585" height="1266" alt="Image" src="https://github.com/user-attachments/assets/4fbab3d1-f4a0-47d6-bf51-ee180db56c02" /> | <img width="1169" height="1418" alt="Image" src="https://github.com/user-attachments/assets/62dbee10-af60-4b21-b50e-48c6d8a0a900" />|
 | **Main Inspection Interface**<br>Interactive web interface showing real-time video feed frame, reference upload button, and scanning triggers. | **Copyright & DRM Overlay**<br>Active screen protection layer that automatically hides sensitive inspection data when screenshot/recording is detected. | **Inspection Hardware**<br>Compact USB camera setup interfaced with laptop workstation & Arduino microcontroller for physical factory line integration. |
 
 ---
